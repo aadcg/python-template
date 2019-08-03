@@ -11,6 +11,6 @@ cd
 
 # push to remote repo
 git init
-git add .
+git add -A
 git commit -m 'Initial commit'
 git push --set-upstream git@gitlab.com:{{cookiecutter.gitlab_account}}/{{cookiecutter.package_name}}.git master
