@@ -19,7 +19,7 @@ setuptools.setup(
     ],
     entry_points={
         "console_scripts": [
-            "run {{cookiecutter.package_name}}=src_{{cookiecutter.package_name}}.entrypoint:run"
+            "run_{{cookiecutter.package_name}}=src_{{cookiecutter.package_name}}.entrypoint:run"
         ]
     },
 )
