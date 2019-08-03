@@ -1,47 +1,47 @@
 # This is a template, and might need editing before it works on your project.
-# image: conda/miniconda3:latest
+image: conda/miniconda3:latest
 
-# stages:
-#   - test
-#   - style
-#   - pages
-#   - run
+stages:
+  - test
+  - style
+  - pages
+  - run
 
-# before_script:
-#   - python -V
-#   - conda env create -f prod_environment.yml
-#   - source activate {{cookiecutter.package_name}}_prod_env
+before_script:
+  - python -V
+  - conda env create -f prod_environment.yml
+  - source activate {{cookiecutter.package_name}}_prod_env
 
-# test:
-#   stage: test
-#   script:
-#     - pip install pytest
-#     - pytest
+test:
+  stage: test
+  script:
+    - pip install pytest
+    - pytest
 
-# style:
-#   stage: style
-#   script:
-#     - pip install pylint
-#     - pylint **/*.py
-#   allow_failure: true
+style:
+  stage: style
+  script:
+    - pip install pylint
+    - pylint **/*.py
+  allow_failure: true
 
-# pages:
-#   stage: pages
-#   script:
-#     - apt-get -qq update && apt-get -y -qq install make
-#     - pip install sphinx
-#     - cd doc ; make html
-#     - mv _build/html/ ../public/
-#   artifacts:
-#     paths:
-#       - doc
-#   only:
-#   - master
+pages:
+  stage: pages
+  script:
+    - apt-get -qq update && apt-get -y -qq install make
+    - pip install sphinx
+    - cd doc ; make html
+    - mv _build/html/ ../public/
+  artifacts:
+    paths:
+      - doc
+  only:
+  - master
 
-# run:
-#   stage: run
-#   script:
-#     - python setup.py bdist_wheel
-#   artifacts:
-#     paths:
-#       - dist
+run:
+  stage: run
+  script:
+    - python setup.py bdist_wheel
+  artifacts:
+    paths:
+      - dist
