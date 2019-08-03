@@ -2,7 +2,7 @@
     "author_name": "André Gomes",
     "author_email": "andremegafone@gmail.com",
     "gitlab_account": "aadcg",
-    "package_description": "This is a description",
+    "package_description": "This is the description of this package",
     "package_name": "hello_world",
     "package_version": "0.1.0"
 }

@@ -1,21 +1,21 @@
 * Python template
 This is a [[https://github.com/audreyr/cookiecutter][cookiecutter]] Python package template.
 
-The template generates a minimal Python package skeleton (with setup.py, test
-folder, gitignore, virtual environment, etc.) so that you jump into the
-development.
+It generates a minimal Python package skeleton (setup.py, testing with pytest,
+virtual environments and CI/CD).
 
 ** Why?
 - Homogeneous Python setups across projects;
-- Easily reproduce the behavior or your project accross different
-  machines/users;
+- Reproducable accross different machines/users;
 - Promotes good software development practices. Testing, documentation and style
   matters;
-- Reusability of the code in different projects, use import rather than copy
-  paste;
-- Easy to deploy in Docker and GitLab Pipelines.
+- Reusability of the code in different projects. Import rather than copy paste;
+- GitLab CI/CD.
 
 ** Usage
+Run the following commands on your terminal emulator. Note that the project will
+be placed where you run the commands.
+
 1. Install cookiecutter;
   #+begin_src sh
     pip install cookiecutter
@@ -26,17 +26,22 @@ development.
     cookiecutter git@gitlab.com:physg/python-template.git
   #+end_src
 
-3. Follow the generated README of your new package so that you set it up properly.
+3. A shell script already did the boring part:
+   - installed a virtual environment (you might want to review the .yml files)
+   - started sphinx documentation
+   - created a remote repo on GitLab and pushed the changes
 
-4. Define what you want before enslaving a computer.
+4. Edit the README.org file;
 
-5. A solution to a problem is the composition of solutions of smaller
+5. Define what you want before enslaving a computer;
+
+6. A solution to a problem is the composition of solutions of smaller
    problems.
 
-6. Write tests before you write a solution.
+7. Write tests before you write a solution.
 
-7. If you're not having fun developing, there might be problem between the chair
-   and the screen.
+8. If you're not having fun, the problem might be between the chair and the
+   screen.
 
 * The Zen of Python (by Tim Peters)
 Beautiful is better than ugly.
