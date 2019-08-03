@@ -71,7 +71,7 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-{{cookiecutter.package_name}}_env
+{{cookiecutter.package_name}}_*_env
 
 # Spyder project settings
 .spyderproject
