@@ -1,0 +1,43 @@
+name: {{cookiecutter.package_name}}_dev_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - autopep8
+  - entrypoints
+  - flake8
+  - ipython
+  - jedi
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - pep8
+  - pip
+  - pylint
+  - pytest
+  - pytest-arraydiff
+  - pytest-astropy
+  - pytest-doctestplus
+  - pytest-openfiles
+  - pytest-remotedata
+  - python>=3.7
+  - requests
+  - rope
+  - scikit-learn
+  - scipy
+  - seaborn
+  - setuptools
+  - sphinx
+  - sphinxcontrib
+  - sphinxcontrib-applehelp
+  - sphinxcontrib-devhelp
+  - sphinxcontrib-htmlhelp
+  - sphinxcontrib-jsmath
+  - sphinxcontrib-qthelp
+  - sphinxcontrib-serializinghtml
+  - sphinxcontrib-websupport
+  - sympy
+  - yapf
+  - pip:
+    - black

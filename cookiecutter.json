@@ -1,0 +1,8 @@
+{
+    "author_name": "Name Surname",
+    "author_email": "me@domain.com",
+    "gitlab_account": "gitlab_username",
+    "package_description": "Short and meaningful",
+    "package_name": "my_package",
+    "package_version": "0.1.0"
+}

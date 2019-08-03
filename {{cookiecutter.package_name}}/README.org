@@ -1,0 +1,73 @@
+* {{cookiecutter.package_name}}
+{{cookiecutter.package_description}}
+
+* How to?
+All of the following commands are to be run from the
+{{cookiecutter.package_name}} folder.
+
+1) Initial commit to gitlab repo, install virtual environment and start sphinx
+   documentation
+  #+begin_src sh
+    source ./install_{{cookiecutter.package_name}}.sh
+  #+end_src
+
+2) Running tests
+  #+begin_src sh
+    pytest
+  #+end_src
+
+3) Check your coding style
+  #+begin_src sh
+    pylint **/*.py
+  #+end_src
+
+4) Update the documentation
+  #+begin_src sh
+    cd doc
+    make html
+  #+end_src
+
+* Examples
+
+#+begin_src example
+Your example code goes here
+#+end_src
+
+* Emacs as Python IDE
+Emacs users might be interested in the way I set it as a Python IDE.
+
+#+begin_src emacs-lisp
+  (require 'package)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+  (package-initialize)
+
+  ;; Bootstrap use-package
+  (when (not (package-installed-p 'use-package))
+    (package-refresh-contents)
+    (package-install 'use-package))
+
+  (use-package elpy
+    :init
+    (elpy-enable)
+    :config
+    (setq python-shell-interpreter "jupyter"
+          python-shell-interpreter-args "console --simple-prompt")
+    :bind
+    ("C-c p" . elpy-autopep8-fix-code)
+    ("C-c b" . elpy-black-fix-code))
+
+  (use-package company-jedi
+    :config (add-to-list 'company-backends 'company-jedi))
+
+  (add-hook 'python-mode-hook (lambda ()
+                                (require 'sphinx-doc)
+                                (sphinx-doc-mode t)))
+#+end_src
+
+Activate the virtual environment of your package:
+
+(M-x pyvenv-deactivate)
+
+M-x pyvenv-activate {{cookiecutter.package_name}}_dev_env
+
+Happy hacking!

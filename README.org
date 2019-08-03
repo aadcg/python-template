@@ -1,0 +1,121 @@
+* Python templatee
+This is a [[https://github.com/audreyr/cookiecutter][cookiecutter]] Python package template.
+
+The template generates a minimal Python package skeleton (with setup.py, test
+folder, gitignore, virtual environment, etc.) so that you jump into the
+development.
+
+** Why?
+- Homogeneous Python setups across projects;
+- Easily reproduce the behavior or your project accross different
+  machines/users;
+- Promotes good software development practices. Testing, documentation and style
+  matters;
+- Reusability of the code in different projects, use import rather than copy
+  paste;
+- Easy to deploy in Docker and GitLab Pipelines.
+
+** Usage
+1. Install cookiecutter;
+  #+begin_src sh
+    pip install cookiecutter
+  #+end_src
+
+2. Create a project based on this template. Follow the prompts;
+  #+begin_src sh
+    cookiecutter git@gitlab.com:physg/python-template.git
+  #+end_src
+
+3. Follow the generated README of your new package so that you set it up properly.
+
+4. Define what you want before enslaving a computer.
+
+5. A solution to a problem is the composition of solutions of smaller
+   problems.
+
+6. Write tests before you write a solution.
+
+7. If you're not having fun developing, there might be problem between the chair
+   and the screen.
+
+* The Zen of Python (by Tim Peters)
+Beautiful is better than ugly.
+
+Explicit is better than implicit.
+
+Simple is better than complex.
+
+Complex is better than complicated.
+
+Flat is better than nested.
+
+Sparse is better than dense.
+
+Readability counts.
+
+Special cases aren't special enough to break the rules.
+
+Although practicality beats purity.
+
+Errors should never pass silently.
+
+Unless explicitly silenced.
+
+In the face of ambiguity, refuse the temptation to guess.
+
+There should be one-- and preferably only one --obvious way to do it.
+
+Although that way may not be obvious at first unless you're Dutch.
+
+Now is better than never.
+
+Although never is often better than *right* now.
+
+If the implementation is hard to explain, it's a bad idea.
+
+If the implementation is easy to explain, it may be a good idea.
+
+Namespaces are one honking great idea -- let's do more of those!
+
+* On virtual environments
+This is tricky.
+
+Anaconda is a python distribution.
+
+Conda is a package manager.
+
+Pip is a package installer for Python.
+
+A virtual environment for development and for production might be radically
+different. For instance, you might want to plot during the development, but your
+program might not output plots.
+
+I spend some time on this and I came up with a simple setup. It might not suit
+your needs.
+
+The template uses conda environments and the file that generates it is
+=environment.yml=. I didn't specify the versions of the libraries (except for
+the python version) because it would soon become obsolete. If you're not working
+alone, it's better to specify the versions. In production, this is a must have
+(the reasons being obvious).
+
+You should add the versions of the libraries you're using to =setup.py= so that
+the egg or wheel you'll generate will have them as dependencies.
+
+Some nice articles I liked while diving into this:
+
+- [[https://caremad.io/posts/2013/07/setup-vs-requirement/][setup.py vs requirements.txt]]
+- [[https://packaging.python.org/discussions/install-requires-vs-requirements/][install_requires vs requirements files]]
+- [[https://stackoverflow.com/questions/43658870/requirements-txt-vs-setup-py][setup.py vs requirements.txt at stackoverflow]]
+- [[https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/][Conda: Myths and Misconceptions]]
+
+* Contribute
+You're welcome to contribute.
+
+If you have suggestions please create an issue.
+
+If you want to implement your ideas create a merge request.
+
+* Credits
+- Thanks to [[https://github.com/emerrf][emerrf]] for most of the ideas.
+- Thanks to [[https://github.com/kragniz][kragniz]] ([[https://github.com/kragniz/cookiecutter-pypackage-minimal][cookiecutter-pypackage-minimal]]).

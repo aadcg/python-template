@@ -1,0 +1,10 @@
+name: {{cookiecutter.package_name}}_prod_env
+# channels:
+#   - defaults
+#   - conda-forge
+dependencies:
+#   - numpy
+#   - pandas
+  - python>=3.7
+#   - scikit-learn
+#   - scipy
