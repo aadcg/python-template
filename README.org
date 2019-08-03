@@ -1,4 +1,4 @@
-* Python templatee
+* Python template
 This is a [[https://github.com/audreyr/cookiecutter][cookiecutter]] Python package template.
 
 The template generates a minimal Python package skeleton (with setup.py, test
